@@ -1,0 +1,48 @@
+{
+  "name": "Di Napoli - Sorveteria & Cafeteria Artesanal",
+  "short_name": "Di Napoli",
+  "description": "Sorveteria e cafeteria artesanal desde 1987. Gelato artesanal, cafés especiais e ambiente acolhedor no coração de São Paulo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8f7",
+  "theme_color": "#fff8f7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Ver Menu",
+      "short_name": "Menu",
+      "description": "Ver nosso cardápio completo",
+      "url": "/#menu",
+      "icons": [{ "src": "/icon-menu.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Reservar Mesa",
+      "short_name": "Reservar",
+      "description": "Fazer uma reserva",
+      "url": "/#reserva",
+      "icons": [{ "src": "/icon-reserva.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Como Chegar",
+      "short_name": "Localização",
+      "description": "Ver localização no mapa",
+      "url": "/#localizacao",
+      "icons": [{ "src": "/icon-localizacao.png", "sizes": "96x96" }]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+---
+interface Props {
+  class?: string;
+}
+---
+<div
+  id="preloader"
+  class="fixed inset-0 bg-background z-[100] flex items-center justify-center transition-all duration-1000"
+  class:list={['opacity-0 pointer-events-none hidden', 'loaded']}
+  role="status"
+  aria-label="Carregando"
+  aria-hidden="true"
+>
+  <div class="text-center">
+    <div class="font-display text-4xl text-primary overflow-hidden">
+      <span class="inline-block translate-y-full transition-transform duration-1000 ease-out" id="preloader-text">Di Napoli</span>
+    </div>
+    <div class="w-12 h-[1px] bg-primary/30 mx-auto mt-4 scale-x-0 transition-transform duration-1000 delay-500 origin-center" id="preloader-line"></div>
+  </div>
+</div>
+
+<script is:inline>
+  // Preloader animation
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const preloaderText = document.getElementById('preloader-text');
+    const preloaderLine = document.getElementById('preloader-line');
+
+    if (preloaderText) preloaderText.style.transform = 'translateY(0)';
+    if (preloaderLine) preloaderLine.style.transform = 'scaleX(1)';
+
+    setTimeout(() => {
+      preloader?.classList.add('loaded');
+    }, 2000);
+  });
+</script>

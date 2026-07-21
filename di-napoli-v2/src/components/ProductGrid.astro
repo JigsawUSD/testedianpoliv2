@@ -1,0 +1,60 @@
+---
+interface Product {
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  alt: string;
+  badge: string;
+  featured?: boolean;
+}
+
+interface Props {
+  products: Product[];
+}
+---
+<section class="py-stack-xl bg-white overflow-hidden" id="menu" aria-labelledby="menu-title">
+  <div class="container-main">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-stack-xl gap-6">
+      <div class="max-w-xl">
+        <h2 id="menu-title" class="font-display-lg text-5xl tracking-tight">O essencial da estação.</h2>
+        <p class="text-on-surface-variant mt-6 text-lg">Curadoria dos nossos itens mais icônicos, preparados à mão diariamente.</p>
+      </div>
+      <div class="flex gap-4">
+        <button class="p-4 border border-outline-variant/20 rounded-full hover:bg-surface-variant transition-colors group focus-visible-ring" aria-label="Produto anterior">
+          <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+        </button>
+        <button class="p-4 border border-outline-variant/20 rounded-full hover:bg-surface-variant transition-colors group focus-visible-ring" aria-label="Próximo produto">
+          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {products.map((product, index) => (
+        <article
+          class="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-surface-container shadow-card transition-all duration-700 hover:shadow-elevated hover:-translate-y-1 mask-reveal"
+          style={`transition-delay: ${index * 150}ms`}
+        >
+          <img
+            alt={product.alt}
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            src={product.image}
+            loading="lazy"
+            width="600"
+            height="750"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="absolute bottom-0 left-0 w-full p-10 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            <span class="text-white/60 text-[10px] uppercase tracking-widest">{product.badge}</span>
+            <h3 class="text-white font-headline-sm text-3xl mt-2">{product.name}</h3>
+            <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 flex justify-between items-center">
+              <p class="text-white/80 text-sm italic">{product.description}</p>
+              <span class="text-white font-semibold">{product.price}</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

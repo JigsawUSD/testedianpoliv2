@@ -1,0 +1,41 @@
+---
+interface Props {
+  scrollY: number;
+}
+---
+<header
+  id="main-header"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-500"
+  class:list={[
+    'bg-white/80 backdrop-blur-md py-stack-sm shadow-sm',
+    scrollY > 50
+  ]}
+  class:list={[
+    'py-stack-md',
+    scrollY <= 50
+  ]}
+>
+  <nav class="container-main flex justify-between items-center">
+    <div class="font-display text-2xl text-primary tracking-tighter">Di Napoli</div>
+
+    <div class="hidden md:flex gap-12 items-center">
+      <a class="font-ui-label text-on-surface-variant hover:text-primary transition-colors" href="#manifesto">Manifesto</a>
+      <a class="font-ui-label text-on-surface-variant hover:text-primary transition-colors" href="#historia">Legado</a>
+      <a class="font-ui-label text-on-surface-variant hover:text-primary transition-colors" href="#menu">Cardápio</a>
+      <a class="font-ui-label text-on-surface-variant hover:text-primary transition-colors" href="#experiencia">Espaço</a>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <button class="material-symbols-outlined text-on-background/60 hover:text-primary transition-colors focus-visible-ring" aria-label="Buscar">
+        search
+      </button>
+      <a class="bg-primary text-white px-8 py-3 rounded-full font-ui-label uppercase tracking-widest text-[10px] hover:bg-on-primary-fixed-variant transition-all focus-visible-ring" href="#reservar">
+        Reservar
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  // Header scroll effect is handled by parent page via scrollY prop
+</script>
