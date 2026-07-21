@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Di Napoli - Sorveteria & Cafeteria Artesanal desde 1987. Gelato artesanal, cafés especiais e ambiente acolhedor no coração de São Paulo.">
+  <meta name="keywords" content="sorveteria artesanal, gelato, café especial, cafeteria, São Paulo, Di Napoli, pistache, tradução italiana">
+  <meta name="author" content="Di Napoli">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dinapoli.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dinapoli.com.br/">
+  <meta property="og:title" content="Di Napoli | Sorveteria & Cafeteria Artesanal desde 1987">
+  <meta property="og:description" content="Mais do que uma sorveteria. Um lugar onde famílias criam memórias através de receitas guardadas a sete chaves.">
+  <meta property="og:image" content="https://dinapoli.com.br/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Di Napoli">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Di Napoli | Sorveteria & Cafeteria Artesanal desde 1987">
+  <meta name="twitter:description" content="Mais do que uma sorveteria. Um lugar onde famílias criam memórias através de receitas guardadas a sete chaves.">
+  <meta name="twitter:image" content="https://dinapoli.com.br/assets/og-image.jpg">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Di Napoli Sorveteria & Cafeteria",
+    "description": "Sorveteria e cafeteria artesanal desde 1987. Gelato artesanal, cafés especiais e ambiente acolhedor.",
+    "url": "https://dinapoli.com.br/",
+    "telephone": "+55-11-4567-8901",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua das Flores, 1987",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01000-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.5505,
+      "longitude": -46.6333
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      }
+    ],
+    "priceRange": "$$",
+    "servesCuisine": ["Italiana", "Gelato", "Café"],
+    "hasMenu": "https://dinapoli.com.br/menu",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "342"
+    },
+    "image": "https://dinapoli.com.br/assets/og-image.jpg",
+    "sameAs": [
+      "https://instagram.com/dinapoli",
+      "https://facebook.com/dinapoli",
+      "https://maps.google.com/?q=Di+Napoli+Sorveteria"
+    ]
+  }
+  </script>
+
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" media="print" onload="this.media='all'">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#fff8f7">
+
+  <title>Di Napoli | Sorveteria & Cafeteria Artesanal desde 1987</title>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden font-body-md">
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-surface z-[100] flex items-center justify-center transition-opacity duration-1000 delay-500">
+    <div class="text-center">
+      <div class="font-display-lg text-4xl md:text-6xl text-primary overflow-hidden">
+        <span class="inline-block translate-y-full" id="preloader-text">Di Napoli</span>
+      </div>
+      <div class="w-12 h-[1px] bg-primary/30 mx-auto mt-4 scale-x-0 transition-transform duration-1000 delay-500 origin-center" id="preloader-line"></div>
+    </div>
+  </div>
+
+  <div id="app"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

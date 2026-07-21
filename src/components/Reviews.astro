@@ -1,0 +1,45 @@
+---
+interface Review {
+  text: string;
+  author: string;
+  initials: string;
+  source: string;
+}
+
+interface Props {
+  reviews: Review[];
+}
+---
+<section class="py-stack-xl bg-surface-container-low" aria-labelledby="reviews-title">
+  <div class="container-main">
+    <div class="text-center mb-stack-xl">
+      <span class="font-ui-label text-primary uppercase tracking-widest text-[10px]">Depoimentos</span>
+      <h2 id="reviews-title" class="font-headline-md text-4xl mt-4 italic">A voz dos nossos amigos</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reviews.map((review, index) => (
+        <article
+          class="bg-white p-12 rounded-[40px] border border-outline-variant/5 hover:border-primary/20 transition-colors group mask-reveal"
+          style={`transition-delay: ${index * 150}ms`}
+        >
+          <div class="flex gap-1 text-primary mb-8" aria-label="Avaliação 5 estrelas">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="font-body-lg text-on-background italic leading-relaxed text-lg">"{review.text}"</p>
+          <div class="mt-10 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center font-bold text-xs text-primary">{review.initials}</div>
+            <div>
+              <h4 class="text-xs font-semibold uppercase tracking-widest">{review.author}</h4>
+              <p class="text-[10px] text-on-surface-variant">{review.source}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

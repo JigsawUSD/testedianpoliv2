@@ -1,0 +1,62 @@
+---
+interface Props {}
+---
+<footer class="bg-white py-24 border-t border-outline-variant/5">
+  <div class="container-main">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8">
+      <div class="max-w-sm">
+        <div class="font-display text-3xl text-primary tracking-tighter">Di Napoli</div>
+        <p class="mt-8 text-on-surface-variant/60 text-sm leading-relaxed">
+          Redefinindo a experiência artesanal desde 1987. Sorvetes e cafés feitos com alma, servidos com excelência.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+        <div>
+          <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold mb-8 text-on-background/40">Explore</h4>
+          <ul class="space-y-4 text-sm text-on-background/80">
+            <li><a class="hover:text-primary transition-colors" href="#historia">História</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#menu">Menu</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#franquias">Franquias</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold mb-8 text-on-background/40">Siga</h4>
+          <ul class="space-y-4 text-sm text-on-background/80">
+            <li><a class="hover:text-primary transition-colors" href="https://instagram.com/dinapoli" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="hover:text-primary transition-colors" href="https://facebook.com/dinapoli" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a class="hover:text-primary transition-colors" href="https://pinterest.com/dinapoli" target="_blank" rel="noopener">Pinterest</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1" id="contato">
+          <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold mb-8 text-on-background/40">Novidades</h4>
+          <p class="text-on-surface-variant text-[12px] mb-4">Receba novidades e sabores sazonais diretamente no seu e-mail.</p>
+          <form class="relative" action="https://formspree.io/f/your-form-id" method="POST" data-netlify="true">
+            <input
+              class="w-full bg-transparent border-b border-outline-variant/20 py-2 focus:border-primary transition-colors outline-none text-sm pr-10"
+              placeholder="Seu e-mail"
+              type="email"
+              name="email"
+              required
+              aria-label="E-mail para newsletter"
+            />
+            <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-primary hover:opacity-80 transition-opacity" aria-label="Enviar">
+              <span class="material-symbols-outlined">east</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-32 flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-outline-variant/5 text-[10px] uppercase tracking-widest text-on-background/30">
+      <p>© 2024 Di Napoli Heritage. Todos os direitos reservados.</p>
+      <div class="flex gap-8">
+        <a class="hover:text-primary transition-colors" href="/privacidade">Privacidade</a>
+        <a class="hover:text-primary transition-colors" href="/termos">Termos</a>
+        <a class="hover:text-primary transition-colors" href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
