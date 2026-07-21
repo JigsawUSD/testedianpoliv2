@@ -2,7 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://dinapoli.com.br',
+  site: 'https://github.io',
+  base: '/testedianpoliv2',
   integrations: [tailwind()],
   compressHTML: true,
   build: {
