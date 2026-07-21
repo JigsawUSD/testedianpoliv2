@@ -1,6 +1,6 @@
 // Main entry point - SPA with vanilla JS components
 import './styles/global.css';
-import { Lenis } from 'lenis';
+import Lenis from 'lenis';
 import { initPreloader } from './components/Preloader';
 import { initNavigation } from './components/Navigation';
 import { initHero } from './components/Hero';
